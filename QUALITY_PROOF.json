@@ -1,0 +1,103 @@
+{
+  "version": "8.34.0",
+  "release_channel": "candidate",
+  "created_at": "2026-10-04T18:21:47.278131+00:00",
+  "source_sha256": "f200641393aca24e51afb6b71f9dced7e24a49dc0913912d47aa12c966418f28",
+  "commit_sha": "unavailable",
+  "docker_image_digest": null,
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "python": "3.12.14",
+  "python_implementation": "CPython",
+  "pip": "pip 25.0.1 from /workspace/scratch/9fdb0a45d6eb/audit834/venv/lib/python3.12/site-packages/pip (python 3.12)",
+  "dependency_lock": {
+    "schema_version": 2,
+    "python_target": "3.12",
+    "complete_transitive_lock": false,
+    "hashes_required": false,
+    "generated_by": "direct-pin-release-candidate",
+    "reason": "Production requires pip-tools hash locks generated and verified in a connected CPython 3.12 Linux environment.",
+    "generation_command": "python scripts/generate_dependency_locks.py",
+    "verification_command": "python scripts/verify_dependency_lock.py --require-hashes",
+    "attestation_command": "python scripts/mark_dependency_lock_complete.py",
+    "candidate_installable": true,
+    "production_attested": false
+  },
+  "automated_tests_discovered": 871,
+  "automated_tests_executed": 871,
+  "tests_passed": 871,
+  "tests_skipped": 0,
+  "tests_failed": 0,
+  "telegram_handlers": 552,
+  "telegram_handlers_source": "application_build",
+  "telegram_test_runtime": "real_python_telegram_bot",
+  "line_coverage_percent": 36,
+  "critical_path_coverage_percent": 75,
+  "candidate_thresholds": {
+    "line_coverage_percent": 19,
+    "critical_path_coverage_percent": 75
+  },
+  "production_thresholds": {
+    "line_coverage_percent": 40,
+    "critical_path_coverage_percent": 85
+  },
+  "validation": {
+    "webapp_assets": true,
+    "compile": true,
+    "pytest_collect": true,
+    "pytest": true,
+    "application_build": true,
+    "ruff": true,
+    "dependency_lock": true,
+    "dependency_boundaries": true,
+    "circular_imports": true,
+    "security_scan": true,
+    "standalone_smokes": true,
+    "performance_budgets": true,
+    "offline_smoke": true,
+    "load_smoke": true,
+    "javascript": true,
+    "coverage_run": true,
+    "coverage": true,
+    "critical_coverage": true,
+    "coverage_data": true
+  },
+  "deferred_validation": {
+    "ruff_full_profile": {
+      "status": "candidate_scope",
+      "reason": "full style/import cleanup is enforced for production releases"
+    },
+    "bandit_full_profile": {
+      "status": "candidate_scope",
+      "reason": "the built-in security scan remains blocking; full Bandit is production-only"
+    },
+    "mypy_full_profile": {
+      "status": "candidate_scope",
+      "reason": "focused Mypy enforcement is reserved for production releases"
+    },
+    "dependency_hash_lock": {
+      "status": "incomplete",
+      "reason": "generate a complete Python 3.12 transitive lock with hashes before production"
+    },
+    "docker_build_no_cache": {
+      "status": "not_run",
+      "reason": "Docker is unavailable or the post-build attestation has not been recorded"
+    },
+    "docker_image_digest": {
+      "status": "not_recorded",
+      "reason": "image digest is assigned after image build"
+    },
+    "external_production_acceptance": {
+      "status": "not_attested",
+      "reason": "run scripts/production_acceptance.py without skips against the deployed staging environment"
+    },
+    "mt5_ex5_compile_and_demo": {
+      "status": "not_attested",
+      "reason": "compile SentinelConnector.mq5 in official MetaEditor and pass the MT5 demo acceptance"
+    }
+  },
+  "artifacts": {
+    "junit": "quality-artifacts/junit.xml",
+    "coverage_xml": "quality-artifacts/coverage.xml",
+    "coverage_json": "quality-artifacts/coverage.json"
+  }
+}
